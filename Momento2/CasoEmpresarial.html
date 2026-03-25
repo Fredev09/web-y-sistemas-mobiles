@@ -423,18 +423,47 @@
             </div>
         </section>
 
-        <form action="https://formsubmit.co/castrovegafreddy@gmail.com" method="POST" class="formulario-contacto">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://tupagina.com/gracias.html">
-            <input type="hidden" name="_subject" value="Nuevo mensaje desde Café Montaña Viva">
+        <section class="seccion encuesta-seccion" id="encuesta">
+            <div class="container">
+                <div class="encuesta-bloque" >
+                    <h2 class="centrado" color="" >Queremos conocerte mejor</h2>
+                    <p class="centrado intro">
+                        Responde estas preguntas para saber qué tipo de café, productos o experiencias te interesan.
+                    </p>
 
-            <input type="text" name="nombre" placeholder="Tu nombre" required>
-            <input type="email" name="email" placeholder="Tu correo" required>
-            <input type="text" name="asunto" placeholder="Asunto" required>
-            <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+                    <form action="https://formsubmit.co/castrovegafreddy@gmail.com" method="POST"
+                        class="encuesta-formulario">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="Nueva encuesta - Café Montaña Viva">
+                        <input type="hidden" name="_template" value="table">
 
-            <button type="submit" class="btn btn-success">Enviar mensaje</button>
-        </form>
+                        <div class="campo-encuesta">
+                            <label for="pregunta1">1. ¿Qué tipo de café disfrutas más y por qué?</label>
+                            <textarea id="pregunta1" name="tipo_de_cafe" rows="4" required></textarea>
+                        </div>
+
+                        <div class="campo-encuesta">
+                            <label for="pregunta2">2. ¿Qué fue lo que más te llamó la atención de Café Montaña
+                                Viva?</label>
+                            <textarea id="pregunta2" name="interes_en_la_marca" rows="4" required></textarea>
+                        </div>
+
+                        <div class="campo-encuesta">
+                            <label for="pregunta3">3. ¿Qué producto te gustaría conocer o comprar?</label>
+                            <textarea id="pregunta3" name="producto_o_experiencia" rows="4" required></textarea>
+                        </div>
+
+                        <div class="campo-encuesta">
+                            <label for="pregunta4">4. ¿Qué comentario o sugerencia nos darías para mejorar tu
+                                experiencia?</label>
+                            <textarea id="pregunta4" name="comentario_o_sugerencia" rows="4" required></textarea>
+                        </div>
+
+                        <button type="submit" class="boton-encuesta">Enviar encuesta</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">

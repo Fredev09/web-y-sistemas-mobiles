@@ -430,3 +430,82 @@ p {
     }
 }
 
+.encuesta-seccion {
+    background: #fcfaf6;
+    padding: 80px 0;
+}
+
+.encuesta-bloque {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.encuesta-formulario {
+    margin-top: 30px;
+}
+
+.campo-encuesta {
+    margin-bottom: 25px;
+}
+
+.campo-encuesta label {
+    display: block;
+    font-weight: bold;
+    color: var(--cafe);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.campo-encuesta textarea {
+    width: 100%;
+    border: 1px solid #d8c8b8;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    resize: vertical;
+    background: #fffdf9;
+    color: var(--texto);
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.campo-encuesta textarea:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 0.2rem rgba(74, 107, 60, 0.12);
+}
+
+.boton-encuesta {
+    width: 100%;
+    background: var(--verde);
+    color: var(--blanco);
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.boton-encuesta:hover {
+    background: var(--verde-oscuro);
+}
+
+@media (max-width: 768px) {
+    .encuesta-bloque {
+        padding: 25px;
+    }
+
+    .campo-encuesta label {
+        font-size: 16px;
+    }
+
+    .campo-encuesta textarea {
+        font-size: 15px;
+    }
+}
