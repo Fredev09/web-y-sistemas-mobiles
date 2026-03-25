@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMampano</title>
+    <style>
+        body {
+            background-image: url("imagenes/fondoCine.png");
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: wheat;
+            font-size: 1rem;
+            line-height: 1.2;
+            justify-content: center;
+            background-size: cover;
+            margin: 0;
+        }
+
+        .contenedorTitulo {
+            width: 60%;
+            margin: 40px auto;
+            background-color: rgba(23, 7, 61, 0.642);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgb(255, 255, 255);
+        }
+
+        .contenedorTitulo h1 {
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 60px;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        .contenedorPeliculas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .pelicula {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .pelicula img {
+            width: 100%;
+            height: 260px;
+            object-fit: contain;
+            background-color: black;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .pelicula h3 {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .pelicula p {
+            font-size: 20px;
+            margin: 5px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            color: gold;
+        }
+
+        .contenedorNav {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .contenedorSubtitulo {
+            max-width: 800px;
+            margin: 40px auto 20px auto;
+            background: linear-gradient(90deg, #59698875, #202630a8);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .contenedorSubtitulo h2 {
+            margin: 0;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 23px;
+            letter-spacing: 3px;
+            color: #f5f5f5;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background-color: gold;
+            margin: 30px auto;
+            width: min(80%, 1200px);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="contenedorTitulo">
+            <h1 style="text-align: center; color: white; font-family: 'Bebas Neue', sans-serif;
+            font-size: 60px; letter-spacing: 3px; font-size: 80px;">CineMampano
+            </h1>
+        </div>
+    </header>
+
+    <hr>
+
+    <div class="contenedorNav">
+        <nav>
+            <a href="#principal">Principal</a>
+            <a href="#clasA">Clasificación A</a>
+            <a href="#clasB">Clasificación B</a>
+            <a href="#clasC">Clasificación C</a>
+            <a href="#clasD">Clasificación D</a>
+        </nav>
+    </div>
+
+    <hr>
+
+    <main>
+        <section id="principal">
+            <div class="contenedorSubtitulo">
+                <h2>Cartelera Principal</h2>
+            </div>
+
+            <div class="contenedorPeliculas">
+                <article class="pelicula">
+                    <img src="imagenes/avatarCaminoAgua.png" alt="Avatar: El Camino del Agua">
+                    <h3>Avatar: El Camino del Agua (2022)</h3>
+                    <p><strong>Clasificación:</strong> B (Mayores de 12 años)</p>
+                    <p><strong>Género:</strong> Ciencia ficción / Aventura</p>
+                    <p><strong>Duración:</strong> 192 minutos</p>
+                    <p><strong>Horarios:</strong> 1:00 p.m. / 4:30 p.m. / 8:00 p.m.</p>
+                    <p>Jake y Neytiri deben huir con su familia cuando los humanos regresan a Pandora. Buscan refugio en
+                        un clan del océano, donde aprenderán nuevas formas de vida mientras luchan por proteger su
+                        hogar.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="imagenes/avengers.png" alt="Avengers: Endgame">
+                    <h3>Avengers: Endgame (2019)</h3>
+                    <p><strong>Clasificación:</strong> B (Mayores de 12 años)</p>
+                    <p><strong>Género:</strong> Acción / Superhéroes</p>
+                    <p><strong>Duración:</strong> 181 minutos</p>
+                    <p><strong>Horarios:</strong> 2:00 p.m. / 6:00 p.m.</p>
+                    <p>Los Vengadores intentan revertir la derrota ante Thanos mediante un arriesgado plan que definirá
+                        el destino del universo.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="imagenes/titanic.png" alt="Titanic">
+                    <h3>Titanic (1997)</h3>
+                    <p><strong>Clasificación:</strong> C (Mayores de 15 años)</p>
+                    <p><strong>Género:</strong> Romance / Drama</p>
+                    <p><strong>Duración:</strong> 195 minutos</p>
+                    <p><strong>Horarios:</strong> 3:00 p.m. / 7:00 p.m.</p>
+                    <p>Jack y Rose se enamoran a bordo del Titanic, pero su historia cambia cuando el barco choca contra
+                        un iceberg y ocurre una tragedia.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="imagenes/joker.png" alt="Joker">
+                    <h3>Joker (2019)</h3>
+                    <p><strong>Clasificación:</strong> D (Mayores de 18 años)</p>
+                    <p><strong>Género:</strong> Drama / Suspenso</p>
+                    <p><strong>Duración:</strong> 122 minutos</p>
+                    <p><strong>Horarios:</strong> 6:00 p.m. / 9:00 p.m.</p>
+                    <p>Arthur Fleck, rechazado por la sociedad, desciende poco a poco hacia la locura hasta convertirse
+                        en el Joker.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="imagenes/spidermanNoWayHome.png" alt="Spider-Man: No Way Home">
+                    <h3>Spider-Man: No Way Home (2021)</h3>
+                    <p><strong>Clasificación:</strong> B (Mayores de 12 años)</p>
+                    <p><strong>Género:</strong> Acción / Superhéroes</p>
+                    <p><strong>Duración:</strong> 148 minutos</p>
+                    <p><strong>Horarios:</strong> 12:30 p.m. / 3:30 p.m. / 6:30 p.m. / 9:30 p.m.</p>
+                    <p>La identidad de Peter es revelada y pide ayuda al Doctor Strange. El hechizo falla y abre el
+                        multiverso, trayendo villanos peligrosos que pondrán a prueba su responsabilidad y sacrificio.
+                    </p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="imagenes/deadpool.png" alt="Deadpool">
+                    <h3>Deadpool (2016)</h3>
+                    <p><strong>Clasificación:</strong> D (Mayores de 18 años)</p>
+                    <p><strong>Género:</strong> Acción / Comedia</p>
+                    <p><strong>Duración:</strong> 108 minutos</p>
+                    <p><strong>Horarios:</strong> 6:30 p.m. / 9:30 p.m.</p>
+                    <p>Wade Wilson se somete a un experimento para curarse y termina con habilidades de regeneración,
+                        pero con una
+                        apariencia distinta. Con humor oscuro y mucha acción, decide buscar venganza contra quienes
+                        arruinaron su vida.</p>
+                </article>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="clasA">
+            <div class="contenedorSubtitulo">
+                <h2>Clasificacion A (Todo publico)</h2>
+            </div>
+
+            <div class="contenedorPeliculas">
+                <article class="pelicula">
+                    <img src="imagenes/buscandoNemo.png" alt="Buscando a Nemo">
+                    <h3>Buscando a Nemo (2003)</h3>
+                    <p><strong>Clasificación:</strong> A (Todo público)</p>
+                    <p><strong>Género:</strong> Animación / Aventura</p>
+                    <p><strong>Duración:</strong> 100 minutos</p>
+                    <p><strong>Horarios:</strong> 11:15 a.m. / 1:45 p.m. / 4:15 p.m.</p>
+                    <p>Marlin es un pez payaso sobreprotector que emprende un largo viaje por el océano para rescatar a
+                        su hijo Nemo, capturado por un buzo. En el camino conoce a Dory, una pez con problemas de
+                        memoria que lo ayudará en la aventura.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="imagenes/intensamente.png" alt="Intensamente">
+                    <h3>Intensamente (2015)</h3>
+                    <p><strong>Clasificación:</strong> A (Todo público)</p>
+                    <p><strong>Género:</strong> Animación / Familiar</p>
+                    <p><strong>Duración:</strong> 95 minutos</p>
+                    <p><strong>Horarios:</strong> 11:30 a.m. / 2:00 p.m. / 4:20 p.m.</p>
+                    <p>Riley enfrenta una mudanza que altera sus emociones. Dentro de su mente, Alegría y Tristeza
+                        deberán trabajar juntas para ayudarla a adaptarse a los cambios.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="imagenes/reyLeon.png" alt="El Rey León">
+                    <h3>El Rey León (1994)</h3>
+                    <p><strong>Clasificación:</strong> A (Todo público)</p>
+                    <p><strong>Género:</strong> Animación / Drama</p>
+                    <p><strong>Duración:</strong> 88 minutos</p>
+                    <p><strong>Horarios:</strong> 12:00 pm. / 2:40 p.m. / 5:10 p.m.</p>
+                    <p>Simba huye tras la muerte de su padre. Con el tiempo entenderá que debe enfrentar su pasado y
+                        reclamar su lugar como rey.</p>
+                </article>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="clasB">
+            <div class="contenedorSubtitulo">
+                <h2>Clasificación B (Mayores de 12 años)</h2>
+            </div>
+
+            <div class="contenedorPeliculas">
+                <article class="pelicula">
+                    <img src="imagenes/avatarCaminoAgua.png" alt="Avatar: El Camino del Agua">
+                    <h3>Avatar: El Camino del Agua (2022)</h3>
+                    <p><strong>Clasificación:</strong> B (Mayores de 12 años)</p>
+                    <p><strong>Género:</strong> Ciencia ficción / Aventura</p>
+                    <p><strong>Duración:</strong> 192 minutos</p>
+                    <p><strong>Horarios:</strong> 1:00 p.m. / 4:30 p.m. / 8:00 p.m.</p>
+                    <p>Jake y Neytiri deben huir con su familia cuando los humanos regresan a Pandora. Buscan refugio en
+                        un clan del océano, donde aprenderán nuevas formas de vida mientras luchan por proteger su
+                        hogar.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="imagenes/spidermanNoWayHome.png" alt="Spider-Man: No Way Home">
+                    <h3>Spider-Man: No Way Home (2021)</h3>
+                    <p><strong>Clasificación:</strong> B (Mayores de 12 años)</p>
+                    <p><strong>Género:</strong> Acción / Superhéroes</p>
+                    <p><strong>Duración:</strong> 148 minutos</p>
+                    <p><strong>Horarios:</strong> 12:30 p.m. / 3:30 p.m. / 6:30 p.m. / 9:30 p.m.</p>
+                    <p>La identidad de Peter es revelada y pide ayuda al Doctor Strange. El hechizo falla y abre el
+                        multiverso, trayendo villanos peligrosos que pondrán a prueba su responsabilidad y sacrificio.
+                    </p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="imagenes/jurassicPark.png" alt="Jurassic Park">
+                    <h3>Jurassic Park (1993)</h3>
+                    <p><strong>Clasificación:</strong> B (Mayores de 12 años)</p>
+                    <p><strong>Género:</strong> Aventura / Ciencia ficción</p>
+                    <p><strong>Duración:</strong> 127 minutos</p>
+                    <p><strong>Horarios:</strong> 1:40 p.m. / 4:50 p.m. / 8:10 p.m.</p>
+                    <p>Un parque con dinosaurios clonados pierde el control cuando falla la seguridad, obligando a los
+                        visitantes a luchar por sobrevivir.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="imagenes/avengers.png" alt="Avengers: Endgame">
+                    <h3>Avengers: Endgame (2019)</h3>
+                    <p><strong>Clasificación:</strong> B (Mayores de 12 años)</p>
+                    <p><strong>Género:</strong> Acción / Superhéroes</p>
+                    <p><strong>Duración:</strong> 181 minutos</p>
+                    <p><strong>Horarios:</strong> 2:00 p.m. / 6:00 p.m.</p>
+                    <p>Los Vengadores intentan revertir la derrota ante Thanos mediante un arriesgado plan que definirá
+                        el destino del universo.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="imagenes/elOrigen.png" alt="El origen">
+                    <h3>El origen (2010)</h3>
+                    <p><strong>Clasificación:</strong> B (Mayores de 12 años)</p>
+                    <p><strong>Género:</strong> Ciencia ficción / Suspenso</p>
+                    <p><strong>Duración:</strong> 148 minutos</p>
+                    <p><strong>Horarios:</strong> 2:15 p.m. / 5:45 p.m. / 9:00 p.m.</p>
+                    <p>Dom Cobb es un experto en entrar en los sueños para robar secretos. Le ofrecen una misión casi
+                        imposible:
+                        implantar una idea en la mente de una persona. Mientras arma el plan, debe enfrentar recuerdos
+                        que podrían
+                        arruinar todo.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="imagenes/panteraNegra.png" alt="Pantera Negra">
+                    <h3>Pantera Negra (2018)</h3>
+                    <p><strong>Clasificación:</strong> B (Mayores de 12 años)</p>
+                    <p><strong>Género:</strong> Acción / Superhéroes</p>
+                    <p><strong>Duración:</strong> 134 minutos</p>
+                    <p><strong>Horarios:</strong> 1:30 p.m. / 4:30 p.m. / 7:45 p.m.</p>
+                    <p>T’Challa regresa a Wakanda para convertirse en rey. Sin embargo, un enemigo aparece con un plan
+                        que amenaza
+                        al reino. Para proteger a su gente, T’Challa deberá aceptar su papel como líder y como Pantera
+                        Negra.</p>
+                </article>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="clasC">
+            <div class="contenedorSubtitulo">
+                <h2 class="tituloSeccion">Clasificación C (Mayores de 15 años)</h2>
+            </div>
+
+            <div class="contenedorPeliculas">
+                <article class="pelicula">
+                    <img src="imagenes/titanic.png" alt="Titanic">
+                    <h3>Titanic (1997)</h3>
+                    <p><strong>Clasificación:</strong> C (Mayores de 15 años)</p>
+                    <p><strong>Género:</strong> Romance / Drama</p>
+                    <p><strong>Duración:</strong> 195 minutos</p>
+                    <p><strong>Horarios:</strong> 3:00 p.m. / 7:00 p.m.</p>
+                    <p>Jack y Rose se enamoran a bordo del Titanic, pero su historia cambia cuando el barco choca contra
+                        un iceberg y ocurre una tragedia.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="imagenes/interestellar.png" alt="Interestelar">
+                    <h3>Interestelar (2014)</h3>
+                    <p><strong>Clasificación:</strong> C (Mayores de 15 años)</p>
+                    <p><strong>Género:</strong> Ciencia ficción / Drama</p>
+                    <p><strong>Duración:</strong> 169 minutos</p>
+                    <p><strong>Horarios:</strong> 3:15 p.m. / 7:30 p.m.</p>
+                    <p>La Tierra está en crisis y un grupo de astronautas viaja por el espacio buscando un nuevo hogar
+                        para la
+                        humanidad. En el camino se enfrentan a planetas desconocidos, peligros y al paso del tiempo que
+                        no funciona
+                        igual para todos.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="imagenes/gladiador.png" alt="Gladiador">
+                    <h3>Gladiador (2000)</h3>
+                    <p><strong>Clasificación:</strong> C (Mayores de 15 años)</p>
+                    <p><strong>Género:</strong> Acción / Drama histórico</p>
+                    <p><strong>Duración:</strong> 155 minutos</p>
+                    <p><strong>Horarios:</strong> 4:00 p.m. / 8:00 p.m.</p>
+                    <p>Máximo, un general romano, es traicionado y pierde todo. Convertido en esclavo, llega a las
+                        arenas como
+                        gladiador. Allí lucha por sobrevivir mientras busca justicia y venganza contra quienes
+                        destruyeron su vida.</p>
+                </article>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="clasD">
+            <div class="contenedorSubtitulo">
+                <h2 class="tituloSeccion">Clasificación D (Mayores de 18 años)</h2>
+            </div>
+
+            <div class="contenedorPeliculas">
+                <article class="pelicula">
+                    <img src="imagenes/joker.png" alt="Joker">
+                    <h3>Joker (2019)</h3>
+                    <p><strong>Clasificación:</strong> D (Mayores de 18 años)</p>
+                    <p><strong>Género:</strong> Drama / Suspenso</p>
+                    <p><strong>Duración:</strong> 122 minutos</p>
+                    <p><strong>Horarios:</strong> 6:00 p.m. / 9:00 p.m.</p>
+                    <p>Arthur Fleck, rechazado por la sociedad, desciende poco a poco hacia la locura hasta convertirse
+                        en el Joker.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="imagenes/deadpool.png" alt="Deadpool">
+                    <h3>Deadpool (2016)</h3>
+                    <p><strong>Clasificación:</strong> D (Mayores de 18 años)</p>
+                    <p><strong>Género:</strong> Acción / Comedia</p>
+                    <p><strong>Duración:</strong> 108 minutos</p>
+                    <p><strong>Horarios:</strong> 6:30 p.m. / 9:30 p.m.</p>
+                    <p>Wade Wilson se somete a un experimento para curarse y termina con habilidades de regeneración,
+                        pero con una
+                        apariencia distinta. Con humor oscuro y mucha acción, decide buscar venganza contra quienes
+                        arruinaron su vida.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="imagenes/theBatman.png" alt="The Batman">
+                    <h3>The Batman (2022)</h3>
+                    <p><strong>Clasificación:</strong> D (Mayores de 18 años)</p>
+                    <p><strong>Género:</strong> Acción / Suspenso</p>
+                    <p><strong>Duración:</strong> 176 minutos</p>
+                    <p><strong>Horarios:</strong> 5:30 p.m. / 9:00 p.m.</p>
+                    <p>Batman investiga una serie de asesinatos en Gotham que parecen conectados con la corrupción de la
+                        ciudad. Mientras
+                        sigue las pistas del Acertijo, descubre secretos que ponen a prueba su idea de justicia y su
+                        identidad.</p>
+                </article>
+            </div>
+        </section>
+
+        <aside>
+            <div class="contenedorSubtitulo">
+                <h2>Información del cine</h2>
+            </div>
+            <div class="contenedorPeliculas">
+                <div class="pelicula">
+                    <h3>Recomendaciones</h3>
+                    <p>- Llega 15 minutos antes de la función.</p>
+                    <p>- Promoción: miércoles 2x1.</p>
+                    <p>- Consulta la clasificación antes de comprar.</p>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p style="text-align: center; color: white; font-size: 20px; margin-top: 40px;">© 2026 CineMampano.
+            Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

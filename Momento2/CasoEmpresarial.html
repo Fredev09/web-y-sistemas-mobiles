@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Montaña Viva</title>
+    <meta name="description"
+        content="Café Montaña Viva: café artesanal colombiano cultivado en las montañas, con tradición familiar, calidad y sostenibilidad.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header class="hero" id="inicio">
+        <video autoplay muted loop playsinline class="video-fondo">
+            <source src="videos/videoCafe.mp4" type="video/mp4">
+        </video>
+
+        <div class="overlay"></div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-personalizada">
+            <div class="container">
+                <a class="navbar-brand logo" href="#inicio">
+                    <img src="imagenes/logo.png" alt="Logo de Café Montaña Viva">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <form class="buscador d-flex flex-column flex-lg-row gap-2 mx-auto my-3 my-lg-0">
+                        <input type="text" class="form-control" placeholder="Buscar café, productos, procesos...">
+                        <button type="submit">Buscar</button>
+                    </form>
+
+                    <ul class="navbar-nav ms-auto align-items-lg-center menu-bootstrap">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#proceso">Proceso</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#distribuidores">Distribuidores</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                        <li class="nav-item ms-lg-3">
+                            <img src="imagenes/logoCol.png" alt="Colombia" class="bandera">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero-contenido contenedor">
+            <p class="etiqueta">Café artesanal colombiano</p>
+            <h1>Del origen a tu taza de café</h1>
+            <p>
+                Descubre el sabor auténtico de nuestro café artesanal, cultivado en las montañas
+                con tradición familiar, selección cuidadosa y compromiso con la calidad.
+            </p>
+            <div class="botones">
+                <a href="#productos" class="boton-personalizado principal">Ver productos</a>
+                <a href="#contacto" class="boton-personalizado secundario">Contáctanos</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="py-4">
+            <div class="container">
+                <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+                    <strong>¡Nuevo!</strong> Ya está disponible nuestro Café Premium de Altura para pedidos y alianzas.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion" id="nosotros">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-12 col-lg-6">
+                        <img src="imagenes/cultivocafe.png" alt="Cultivo de café en montaña" class="imagen img-fluid">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <p class="subtitulo">Nuestra historia</p>
+                        <h2>Sobre Nosotros</h2>
+                        <p>
+                            Café Montaña Viva nace de la tradición familiar y del amor por el café cultivado
+                            en las montañas colombianas. Nuestra marca representa el esfuerzo de generaciones
+                            que han aprendido a cuidar la tierra y seleccionar cada grano con dedicación.
+                        </p>
+                        <p>
+                            Cada cosecha refleja nuestro compromiso con la artesanía, la sostenibilidad y la calidad.
+                            Desde el cultivo hasta el empaque, trabajamos con procesos responsables.
+                        </p>
+                        <p>
+                            Hoy buscamos compartir nuestra historia con consumidores, tiendas especializadas,
+                            distribuidores y turistas que valoran el origen y la tradición.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion fondo-claro">
+            <div class="container">
+                <p class="subtitulo centrado">Lo que nos representa</p>
+                <h2 class="centrado">Esencia de la marca</h2>
+                <p class="centrado intro">
+                    Tradición, sostenibilidad, calidad y cercanía.
+                </p>
+
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="tarjeta-personalizada h-100">
+                            <h3>Tradición familiar</h3>
+                            <p>Rescatamos el legado del cultivo artesanal y el conocimiento entre generaciones.</p>
+                            <span class="badge text-bg-success">Tradición</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="tarjeta-personalizada h-100">
+                            <h3>Sostenibilidad</h3>
+                            <p>Trabajamos con respeto por la tierra y el entorno natural.</p>
+                            <span class="badge text-bg-success">Sostenible</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="tarjeta-personalizada h-100">
+                            <h3>Calidad de origen</h3>
+                            <p>Seleccionamos granos de montaña para ofrecer un sabor auténtico.</p>
+                            <span class="badge text-bg-warning text-dark">Origen</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="tarjeta-personalizada h-100">
+                            <h3>Confianza y cercanía</h3>
+                            <p>Queremos que cada cliente conozca nuestra historia y nuestros procesos.</p>
+                            <span class="badge text-bg-dark">Marca</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion" id="productos">
+            <div class="container">
+                <p class="subtitulo centrado">Catálogo</p>
+                <h2 class="centrado">Nuestros Productos</h2>
+                <p class="centrado intro">
+                    Una selección de cafés y experiencias para diferentes gustos.
+                </p>
+
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="tarjeta-personalizada producto h-100">
+                            <img src="imagenes/cafeclasico.png" alt="Bolsa de Café Clásico" class="img-fluid">
+                            <span class="badge text-bg-success mb-2">Clásico</span>
+                            <h3>Café Clásico</h3>
+                            <p>Café colombiano suave y equilibrado.</p>
+                            <span class="precio">$12.000</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="tarjeta-personalizada producto h-100">
+                            <img src="imagenes/cafeintenso.png" alt="Bolsa de Café Intenso" class="img-fluid">
+                            <span class="badge text-bg-danger mb-2">Intenso</span>
+                            <h3>Café Intenso</h3>
+                            <p>Sabor fuerte y aroma profundo, ideal para quienes disfrutan un café con carácter.</p>
+                            <span class="precio">$14.000</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="tarjeta-personalizada producto h-100">
+                            <img src="imagenes/cafedescafeinado.png" alt="Bolsa de Café Descafeinado" class="img-fluid">
+                            <span class="badge text-bg-secondary mb-2">Descafeinado</span>
+                            <h3>Café Descafeinado</h3>
+                            <p>Todo el sabor del café artesanal, sin cafeína.</p>
+                            <span class="precio">$16.000</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="tarjeta-personalizada producto h-100">
+                            <img src="imagenes/cafeorganico.png" alt="Bolsa de Café Orgánico" class="img-fluid">
+                            <span class="badge text-bg-success mb-2">Orgánico</span>
+                            <h3>Café Orgánico</h3>
+                            <p>Cultivado con prácticas responsables.</p>
+                            <span class="precio">$20.000</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="tarjeta-personalizada producto h-100">
+                            <img src="imagenes/cafepremiumaltura.png" alt="Bolsa de Café Premium de Altura"
+                                class="img-fluid">
+                            <span class="badge text-bg-warning text-dark mb-2">Premium</span>
+                            <h3>Café Premium de Altura</h3>
+                            <p>Granos seleccionados con aroma refinado.</p>
+                            <span class="precio">$55.000</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="tarjeta-personalizada producto h-100">
+                            <img src="imagenes/kitregalo.png.jpeg" alt="Kit regalo cafetero" class="img-fluid">
+                            <span class="badge text-bg-info mb-2">Regalo</span>
+                            <h3>Kit Regalo Cafetero</h3>
+                            <p>Ideal para obsequios y recuerdos.</p>
+                            <span class="precio">$18.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion proceso" id="proceso">
+            <div class="container">
+                <p class="subtitulo centrado">Del cultivo a tu taza de café</p>
+                <h2 class="centrado">Nuestro proceso artesanal</h2>
+                <p class="centrado intro blanco">
+                    Mostramos las etapas que garantizan autenticidad, sabor y calidad.
+                </p>
+
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="tarjeta-personalizada oscuro h-100">
+                            <h3>1. Cultivo</h3>
+                            <p>Nuestras plantas crecen en zonas montañosas con condiciones ideales.</p>
+                            <img src="imagenes/cultivo.png" alt="Cultivo de café" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="tarjeta-personalizada oscuro h-100">
+                            <h3>2. Selección</h3>
+                            <p>Elegimos cuidadosamente los granos para asegurar uniformidad y frescura.</p>
+                            <img src="imagenes/seleccion.png" alt="Selección de café" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="tarjeta-personalizada oscuro h-100">
+                            <h3>3. Tostado</h3>
+                            <p>El tostado resalta los aromas y el sabor característico del café.</p>
+                            <img src="imagenes/tostado.png" alt="Tostado de café" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="tarjeta-personalizada oscuro h-100">
+                            <h3>4. Empaque</h3>
+                            <p>Empacamos el café para conservar su aroma y presentación.</p>
+                            <img src="imagenes/empaque.png" alt="Empaque de café" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion" id="distribuidores">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-12 col-lg-6">
+                        <p class="subtitulo">Para tiendas y aliados</p>
+                        <h2>Información para distribuidores</h2>
+                        <p>
+                            Queremos facilitar el contacto con tiendas especializadas y distribuidores,
+                            mostrando una marca organizada y confiable.
+                        </p>
+                        <ul class="lista">
+                            <li>Catálogo visual organizado</li>
+                            <li>Productos artesanales con identidad colombiana</li>
+                            <li>Atención directa para consultas comerciales</li>
+                            <li>Base para futura tienda virtual</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="tarjeta-personalizada">
+                            <h3>¿Buscas distribuir nuestros productos?</h3>
+                            <p>
+                                Estamos abiertos a alianzas con tiendas, cafés, hoteles, restaurantes y distribuidores.
+                            </p>
+                            <a href="#contacto" class="boton-personalizado principal">Solicitar información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion fondo-claro">
+            <div class="container">
+                <p class="subtitulo centrado">Experiencias</p>
+                <h2 class="centrado">Para visitantes y amantes del café</h2>
+                <p class="centrado intro">
+                    También pensamos en turistas y visitantes que desean conocer el origen del café.
+                </p>
+
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="tarjeta-personalizada h-100">
+                            <h3>Historia cafetera</h3>
+                            <p>Conoce el origen de la finca y la tradición familiar.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="tarjeta-personalizada h-100">
+                            <h3>Proceso artesanal</h3>
+                            <p>Descubre cómo cada etapa influye en la calidad final.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="tarjeta-personalizada h-100">
+                            <h3>Kits de regalo</h3>
+                            <p>Lleva contigo una experiencia completa de Café Montaña Viva.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion fondo-claro">
+            <div class="container">
+                <p class="subtitulo centrado">Preguntas frecuentes</p>
+                <h2 class="centrado">Resolvemos tus dudas</h2>
+
+                <div class="accordion mt-4" id="accordionCafe">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#pregunta1" aria-expanded="true" aria-controls="pregunta1">
+                                ¿Hacen envíos o entregas?
+                            </button>
+                        </h2>
+                        <div id="pregunta1" class="accordion-collapse collapse show" data-bs-parent="#accordionCafe">
+                            <div class="accordion-body">
+                                Sí, atendemos pedidos y consultas por WhatsApp para coordinar entregas y atención
+                                comercial.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#pregunta2" aria-expanded="false" aria-controls="pregunta2">
+                                ¿Tienen kits para regalo?
+                            </button>
+                        </h2>
+                        <div id="pregunta2" class="accordion-collapse collapse" data-bs-parent="#accordionCafe">
+                            <div class="accordion-body">
+                                Sí, contamos con kits de regalo cafetero ideales para obsequios, turismo y recuerdos
+                                especiales.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#pregunta3" aria-expanded="false" aria-controls="pregunta3">
+                                ¿Trabajan con distribuidores?
+                            </button>
+                        </h2>
+                        <div id="pregunta3" class="accordion-collapse collapse" data-bs-parent="#accordionCafe">
+                            <div class="accordion-body">
+                                Sí, estamos abiertos a alianzas con tiendas, hoteles, restaurantes y distribuidores
+                                interesados en nuestros productos.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion contacto" id="contacto">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-12 col-lg-6">
+                        <p class="subtitulo">Contacto rápido</p>
+                        <h2>Hablemos de tu próxima taza de café</h2>
+                        <p>
+                            Escríbenos para pedidos, información sobre productos, alianzas comerciales,
+                            kits de regalo o futuras visitas.
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="tarjeta-personalizada">
+                            <a href="https://wa.me/573218094805" target="_blank" rel="noopener noreferrer"
+                                class="btn-whatsapp">
+                                Contáctanos por WhatsApp
+                            </a>
+
+                            <div class="datos">
+                                <p><strong>Correo:</strong> cafemontañaviva@gmail.com</p>
+                                <p><strong>Teléfono:</strong> +57 321 809 4805</p>
+                                <p><strong>Ubicación:</strong> Montería, Córdoba, Colombia</p>
+                            </div>
+
+                            <button type="button" class="btn btn-success position-relative mt-3">
+                                Pedidos activos
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    24
+                                    <span class="visually-hidden">pedidos activos</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <form action="https://formsubmit.co/castrovegafreddy@gmail.com" method="POST" class="formulario-contacto">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://tupagina.com/gracias.html">
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde Café Montaña Viva">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo" required>
+            <input type="text" name="asunto" placeholder="Asunto" required>
+            <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+
+            <button type="submit" class="btn btn-success">Enviar mensaje</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>Café Montaña Viva</h3>
+                <p>Café artesanal colombiano cultivado con tradición, calidad y respeto por la naturaleza.</p>
+            </div>
+
+            <div>
+                <h4>Enlaces</h4>
+                <ul class="lista-footer">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Información</h4>
+                <p>Correo: cafemontañaviva@gmail.com</p>
+                <p>Teléfono: +57 321 809 4805</p>
+                <p>Instagram / Facebook: @cafemontañaviva</p>
+            </div>
+        </div>
+
+        <div class="copy">
+            <p>&copy; 2026 Café Montaña Viva. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
