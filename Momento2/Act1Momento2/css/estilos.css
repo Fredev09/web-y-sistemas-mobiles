@@ -1,0 +1,228 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding-top: 0;
+    background-color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 70px;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url('../assets/imagenes/portada.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav .nav-link::after {
+        content: "";
+    }
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+.navbar.bg-dark {
+    background: linear-gradient(90deg, #010834, #150e49ad);
+}
+
+#quienes-somos {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+#quienes-somos h2 {
+    color: #0a0f2c;
+    font-weight: 700;
+    text-align: center;
+}
+
+#quienes-somos p {
+    color: #333;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+#cursos {
+    background: linear-gradient(135deg, #0f3758, #15217e);
+    color: white;
+}
+
+#cursos h2 {
+    color: #ffffff;
+}
+
+.texto-cursos {
+    color: #e3f2fd;
+    font-size: 1.05rem;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.categoria-titulo {
+    color: #00c3ff;
+    font-weight: 700;
+    border-left: 5px solid #00c3ff;
+    padding-left: 12px;
+}
+
+.curso-card {
+    background-color: #12163a;
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.curso-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.curso-card .card-img-top {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+.curso-card .card-title {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.curso-card .card-text {
+    color: #cfd8dc;
+    line-height: 1.6;
+}
+
+.lista-curso li {
+    color: #e0e0e0;
+}
+
+.categoria-badge {
+    display: inline-block;
+    background-color: rgba(0, 195, 255, 0.15);
+    color: #00c3ff;
+    padding: 4px 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#cursos .btn {
+    background-color: #00c3ff;
+    border: none;
+    color: #000;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+#cursos .btn:hover {
+    background-color: #00a3cc;
+}
+
+#inscripcion {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+#inscripcion h2 {
+    color: #0a0f2c;
+    font-weight: 700;
+}
+
+#inscripcion form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+#inscripcion .form-label {
+    font-weight: 600;
+    color: #333;
+}
+
+#inscripcion .form-control,
+#inscripcion .form-select {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#inscripcion .form-control:focus,
+#inscripcion .form-select:focus {
+    border-color: #1a237e;
+    box-shadow: 0 0 5px rgba(26, 35, 126, 0.5);
+}
+
+#inscripcion .btn {
+    width: 100%;
+    background: linear-gradient(90deg, #0d6efd, #1a237e);
+    border: none;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#inscripcion .btn:hover {
+    background: linear-gradient(90deg, #0b5ed7, #0a1a5c);
+}
+
+#inscripcion .mb-3 {
+    margin-bottom: 15px;
+}
+
+#por-que-elegirnos h4 {
+    color: #1a237e;
+    font-weight: 600;
+}
+
+#por-que-elegirnos p {
+    color: #555;
+}
+
+#mision-vision h3 {
+    color: #1a237e;
+}
+
+.footer {
+    font-size: 0.9rem;
+}

@@ -509,3 +509,105 @@ p {
         font-size: 15px;
     }
 }
+
+/* ====== PAGINA DE GRACIAS ====== */
+
+.gracias-contenedor {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--beige);
+    padding: 24px;
+}
+
+.gracias-card {
+    width: 100%;
+    max-width: 640px;
+    text-align: center;
+    background: var(--blanco);
+    padding: 42px 36px;
+    border-radius: 18px;
+    box-shadow: var(--sombra);
+}
+
+.gracias-card h1 {
+    color: var(--cafe);
+    margin-bottom: 15px;
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.gracias-card p {
+    color: var(--gris);
+    margin-bottom: 25px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.btn-volver {
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--verde);
+    color: var(--blanco);
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-volver:hover {
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+}
+
+/* ====== RESPONSIVIDAD ====== */
+
+@media (max-width: 768px) {
+    .gracias-contenedor {
+        padding: 20px;
+    }
+
+    .gracias-card {
+        padding: 32px 24px;
+        border-radius: 16px;
+    }
+
+    .gracias-card h1 {
+        font-size: 30px;
+    }
+
+    .gracias-card p {
+        font-size: 16px;
+    }
+
+    .btn-volver {
+        width: 100%;
+        padding: 14px 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .gracias-contenedor {
+        padding: 16px;
+    }
+
+    .gracias-card {
+        padding: 26px 18px;
+        border-radius: 14px;
+    }
+
+    .gracias-card h1 {
+        font-size: 26px;
+    }
+
+    .gracias-card p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .btn-volver {
+        font-size: 15px;
+        padding: 13px 18px;
+    }
+}
