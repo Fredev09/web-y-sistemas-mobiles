@@ -3,6 +3,8 @@
     --color-secundario: #1a237e;
     --color-fondo-oscuro: #0c1233;
     --color-texto: #1f2937;
+    --color-claro: #f4f7fb;
+    --color-borde: rgba(26, 35, 126, 0.12);
 }
 
 * {
@@ -47,12 +49,8 @@ textarea {
 }
 
 .navbar {
-    border: none;
+    background: linear-gradient(90deg, #010834, #150e49d7);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
-}
-
-.navbar.bg-dark {
-    background: linear-gradient(90deg, #010834, #150e49ad);
 }
 
 .navbar-brand {
@@ -99,10 +97,14 @@ textarea {
     object-fit: cover;
 }
 
+#quienes-somos {
+    background: #f8f9fa;
+}
+
 #quienes-somos h2,
-#inscripcion h2,
-#por-que-elegirnos h2,
 #video h2,
+#por-que-elegirnos h2,
+#mision-vision h2,
 #faq h2 {
     color: #0a0f2c;
 }
@@ -110,6 +112,7 @@ textarea {
 #quienes-somos p,
 #video p,
 #por-que-elegirnos p,
+#mision-vision p,
 #faq p {
     line-height: 1.7;
 }
@@ -193,10 +196,10 @@ textarea {
 }
 
 #cursos .btn,
-#inscripcion .btn {
+.btn-enviar-formulario {
     border: none;
     font-weight: 600;
-    border-radius: 10px;
+    border-radius: 14px;
 }
 
 #cursos .btn {
@@ -208,60 +211,312 @@ textarea {
     background-color: #00a3cc;
 }
 
-.tarjeta-info,
-.tarjeta-mv {
-    border: 1px solid rgba(26, 35, 126, 0.08);
+#video {
+    background: #f8fbff;
 }
 
-#por-que-elegirnos h4,
-#mision-vision h3 {
+#por-que-elegirnos {
+    background: linear-gradient(180deg, #ffffff 0%, #f3f7ff 100%);
+}
+
+.tarjeta-info {
+    border: 1px solid rgba(26, 35, 126, 0.08);
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-info:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(22, 34, 84, 0.12);
+}
+
+#por-que-elegirnos h4 {
     color: var(--color-secundario);
     font-weight: 600;
 }
 
-#inscripcion {
-    background-color: #f8f9fa;
+#mision-vision {
+    background: linear-gradient(135deg, #eef3ff, #f8fbff);
 }
 
-.texto-formulario {
-    max-width: 680px;
-    margin: 0 auto;
+.tarjeta-mv {
+    border: 1px solid var(--color-borde);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 14px 32px rgba(19, 31, 74, 0.08);
+}
+
+#mision-vision h3 {
+    color: var(--color-secundario);
+    font-weight: 700;
+}
+
+
+#inscripcion {
+    background:
+        radial-gradient(circle at top left, rgba(0, 195, 255, 0.16), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(76, 175, 254, 0.14), transparent 30%),
+        linear-gradient(135deg, #081226 0%, #0d1b3d 45%, #132a63 100%);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+#inscripcion::before,
+#inscripcion::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(10px);
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+#inscripcion::before {
+    width: 260px;
+    height: 260px;
+    background: #00c3ff;
+    top: -80px;
+    left: -80px;
+}
+
+#inscripcion::after {
+    width: 320px;
+    height: 320px;
+    background: #5b7cff;
+    bottom: -120px;
+    right: -120px;
+}
+
+.inscripcion-layout {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 0.95fr 1.25fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.inscripcion-info {
+    padding: 2rem 1rem 2rem 0;
+}
+
+.inscripcion-etiqueta {
+    display: inline-block;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #9fe8ff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.inscripcion-info h2 {
+    font-size: 2.2rem;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.inscripcion-info>p {
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.8;
+    max-width: 520px;
+}
+
+.inscripcion-beneficios {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.beneficio-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem 1.1rem;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(6px);
+}
+
+.beneficio-numero {
+    min-width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #00c3ff, #4facfe);
+    color: #061221;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+}
+
+.beneficio-item h4 {
+    margin-bottom: 0.25rem;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.beneficio-item p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.inscripcion-mini-card {
+    margin-top: 1.5rem;
+    padding: 1rem 1.2rem;
+    border-left: 4px solid #00c3ff;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.inscripcion-form-panel {
+    background: rgba(255, 255, 255, 0.96);
+    color: #1f2937;
+    border-radius: 28px;
+    padding: 1.25rem 1.25rem 1.5rem;
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.form-topbar {
+    display: flex;
+    gap: 0.45rem;
+    margin-bottom: 1rem;
+    padding-inline: 0.35rem;
+}
+
+.form-topbar span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.form-topbar span:nth-child(1) {
+    background: #ff6b6b;
+}
+
+.form-topbar span:nth-child(2) {
+    background: #ffd166;
+}
+
+.form-topbar span:nth-child(3) {
+    background: #06d6a0;
+}
+
+.form-encabezado {
+    padding: 0.5rem 0.4rem 1rem;
+}
+
+.form-kicker {
+    margin-bottom: 0.35rem;
+    color: #1a237e;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.form-encabezado h3 {
+    margin-bottom: 0.45rem;
+    color: #0c1233;
+    font-size: 1.7rem;
+}
+
+.form-encabezado p {
+    margin-bottom: 0;
+    color: #5b6475;
+}
+
+#mensajeExito {
+    border-radius: 18px;
+    border: none;
 }
 
 #inscripcion form {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 18px;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    background: transparent;
+    padding: 0.4rem;
+    box-shadow: none;
+    border: none;
 }
 
 #inscripcion .form-label {
-    font-weight: 600;
-    color: #333;
+    font-weight: 700;
+    color: #25304a;
+    margin-bottom: 0.45rem;
+    font-size: 0.92rem;
 }
 
 #inscripcion .form-control,
 #inscripcion .form-select {
-    min-height: 48px;
-    border-radius: 10px;
-    border: 1px solid #ced4da;
+    min-height: 54px;
+    border-radius: 16px;
+    border: 1px solid #dbe3f0;
+    background: #f7faff;
+    color: #1f2937;
+    padding-inline: 0.95rem;
+    transition: all 0.25s ease;
+}
+
+#inscripcion textarea.form-control {
+    min-height: 120px;
+    padding-top: 0.9rem;
 }
 
 #inscripcion .form-control:focus,
-#inscripcion .form-select:focus,
-#inscripcion .form-check-input:focus {
-    border-color: var(--color-secundario);
-    box-shadow: 0 0 0 0.2rem rgba(26, 35, 126, 0.18);
+#inscripcion .form-select:focus {
+    background: #ffffff;
+    border-color: #4facfe;
+    box-shadow: 0 0 0 0.24rem rgba(79, 172, 254, 0.18);
 }
 
-#inscripcion .btn {
-    width: 100%;
-    background: linear-gradient(90deg, #0d6efd, #1a237e);
-    padding: 0.85rem 1rem;
+.formulario-check-especial {
+    padding: 1rem 1rem 1rem 2.5rem;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #f4f8ff, #eef4ff);
+    border: 1px solid #dbe6ff;
 }
 
-#inscripcion .btn:hover {
-    background: linear-gradient(90deg, #0b5ed7, #0a1a5c);
+.formulario-check-especial .form-check-label {
+    color: #334155;
+    line-height: 1.6;
+}
+
+.btn-enviar-formulario {
+    min-height: 56px;
+    background: linear-gradient(90deg, #00c3ff, #1a237e);
+    color: #ffffff;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    box-shadow: 0 14px 28px rgba(26, 35, 126, 0.24);
+    transition: all 0.25s ease;
+}
+
+.btn-enviar-formulario:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 32px rgba(26, 35, 126, 0.30);
+    color: #ffffff;
+}
+
+#faq {
+    background: #f7f9fc;
+}
+
+.accordion-item {
+    border-radius: 16px !important;
+    overflow: hidden;
+    border: 1px solid rgba(26, 35, 126, 0.08);
+    margin-bottom: 0.8rem;
 }
 
 .accordion-button:not(.collapsed) {
@@ -290,9 +545,22 @@ textarea {
     .curso-card .card-img-top {
         height: 220px;
     }
+
+    .inscripcion-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .inscripcion-info {
+        padding: 0;
+    }
+
+    .inscripcion-info h2 {
+        font-size: 1.9rem;
+    }
 }
 
 @media (max-width: 767px) {
+
     section,
     aside {
         overflow: hidden;
@@ -304,10 +572,6 @@ textarea {
 
     .hero .lead {
         font-size: 1rem;
-    }
-
-    #inscripcion form {
-        padding: 1rem;
     }
 
     .categoria-titulo {
@@ -348,5 +612,19 @@ textarea {
 
     .footer {
         font-size: 0.88rem;
+    }
+
+    .inscripcion-form-panel {
+        padding: 1rem 0.85rem 1.25rem;
+        border-radius: 22px;
+    }
+
+    .beneficio-item {
+        padding: 0.9rem;
+    }
+
+    .beneficio-numero {
+        min-width: 42px;
+        height: 42px;
     }
 }
