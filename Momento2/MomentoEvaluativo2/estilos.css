@@ -77,6 +77,8 @@ textarea {
     color: var(--text-dark);
 }
 
+/* ===== HEADER ===== */
+
 .site-header {
     position: sticky;
     top: 0;
@@ -174,6 +176,8 @@ textarea {
     color: var(--white);
 }
 
+/* ===== BOTONES ===== */
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -202,35 +206,15 @@ textarea {
     border-color: rgba(255, 255, 255, 0.18);
 }
 
-.hero {
-    position: relative;
-    overflow: hidden;
-    padding: 5rem 0 4rem;
-    background:
-        radial-gradient(circle at top right, rgba(111, 229, 154, 0.16), transparent 24%),
-        radial-gradient(circle at bottom left, rgba(118, 199, 255, 0.16), transparent 28%),
-        linear-gradient(180deg, #08111f 0%, #0c1728 100%);
+.btn-submit {
+    width: 100%;
+    min-height: 56px;
+    margin-top: 0.25rem;
+    border: 0;
+    cursor: pointer;
 }
 
-.hero-bg {
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 42px 42px;
-    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), transparent 92%);
-    pointer-events: none;
-}
-
-.hero-grid {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 1.12fr 0.88fr;
-    gap: 2rem;
-    align-items: center;
-}
+/* ===== TEXTOS GENERALES ===== */
 
 .eyebrow {
     display: inline-block;
@@ -252,15 +236,50 @@ textarea {
     border-color: rgba(255, 255, 255, 0.1);
 }
 
-.hero-copy h1,
-.section-heading h2,
-.event-copy h2 {
+.box-kicker,
+.form-kicker,
+.trust-kicker,
+.service-tag,
+.panel-label {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.box-kicker {
+    color: var(--blue);
+    margin-bottom: 0.45rem;
+}
+
+.form-kicker,
+.panel-label,
+.trust-kicker {
+    color: var(--green);
+}
+
+.section-heading {
+    margin-bottom: 1.8rem;
+}
+
+.section-heading-center {
+    max-width: 760px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.section-heading h2 {
     margin: 0;
     font-family: "Manrope", sans-serif;
-    font-size: clamp(2.3rem, 4vw, 4.8rem);
-    line-height: 1.02;
+    font-size: clamp(1.9rem, 3vw, 3.3rem);
+    line-height: 1.08;
     letter-spacing: -0.04em;
     color: var(--white);
+}
+
+.section-light .section-heading h2 {
+    color: var(--text-dark);
 }
 
 .hero-text,
@@ -271,6 +290,93 @@ textarea {
 .channel-card p,
 .site-footer p {
     color: var(--text-soft);
+}
+
+.section-text {
+    max-width: 62ch;
+    margin: 1rem auto 0;
+}
+
+.section-text-light {
+    color: var(--text);
+    margin-top: 1rem;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 0 4rem;
+    background:
+        radial-gradient(circle at top right, rgba(111, 229, 154, 0.16), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(118, 199, 255, 0.16), transparent 28%),
+        linear-gradient(180deg, #08111f 0%, #0c1728 100%);
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), transparent 92%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-has-photo {
+    position: relative;
+    min-height: 720px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-has-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 17, 31, 0.96) 0%,
+            rgba(8, 17, 31, 0.92) 34%,
+            rgba(8, 17, 31, 0.72) 58%,
+            rgba(8, 17, 31, 0.90) 100%
+        ),
+        url("imagenes/hero-energia.png");
+    background-size: cover;
+    background-position: center right;
+    opacity: 0.95;
+    z-index: 0;
+}
+
+.hero-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-grid-better {
+    grid-template-columns: minmax(0, 1.18fr) minmax(340px, 0.82fr);
+    gap: 1.5rem;
+    align-items: end;
+}
+
+.hero-copy {
+    max-width: 720px;
+}
+
+.hero-copy h1 {
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(2.5rem, 5vw, 5.3rem);
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+    color: var(--white);
 }
 
 .hero-text {
@@ -319,6 +425,15 @@ textarea {
     box-shadow: var(--shadow-lg);
 }
 
+.hero-panel-compact {
+    max-width: 430px;
+    margin-left: auto;
+    backdrop-filter: blur(10px);
+    background: linear-gradient(180deg, rgba(18, 35, 60, 0.78), rgba(14, 26, 45, 0.92));
+
+    align-self: start;
+}
+
 .panel-window {
     display: flex;
     gap: 0.45rem;
@@ -331,9 +446,17 @@ textarea {
     border-radius: 50%;
 }
 
-.panel-window span:nth-child(1) { background: #ff7f7f; }
-.panel-window span:nth-child(2) { background: #ffd666; }
-.panel-window span:nth-child(3) { background: #75e7a4; }
+.panel-window span:nth-child(1) {
+    background: #ff7f7f;
+}
+
+.panel-window span:nth-child(2) {
+    background: #ffd666;
+}
+
+.panel-window span:nth-child(3) {
+    background: #75e7a4;
+}
 
 .panel-card {
     border-radius: 22px;
@@ -348,20 +471,7 @@ textarea {
 }
 
 .panel-label,
-.box-kicker,
-.form-kicker,
-.trust-kicker,
-.service-tag {
-    display: inline-block;
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.panel-label,
 .form-kicker {
-    color: var(--green);
     margin-bottom: 0.55rem;
 }
 
@@ -408,6 +518,8 @@ textarea {
     background: linear-gradient(135deg, rgba(111, 229, 154, 0.12), rgba(118, 199, 255, 0.12));
 }
 
+/* ===== FRANJA DE CONFIANZA ===== */
+
 .trust-band {
     background: #0d1728;
     border-top: 1px solid var(--line);
@@ -431,90 +543,126 @@ textarea {
     padding-left: 0;
 }
 
-.trust-kicker {
-    color: var(--green);
-    margin-bottom: 0.3rem;
-}
-
 .trust-band p {
     margin: 0;
     color: var(--text);
 }
 
-.about-grid {
+/* ===== SOBRE NOSOTROS ===== */
+
+.about-section-clean {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section-clean::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(6, 14, 28, 0.96) 0%,
+            rgba(6, 14, 28, 0.92) 34%,
+            rgba(6, 14, 28, 0.78) 58%,
+            rgba(6, 14, 28, 0.90) 100%
+        ),
+        url("imagenes/nosotros-energia.png");
+    background-size: cover;
+    background-position: center right;
+    z-index: 0;
+}
+
+.about-layout-clean {
+    position: relative;
+    z-index: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr 0.8fr;
-    gap: 1.5rem;
-    align-items: start;
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+    gap: 2.2rem;
+    align-items: center;
 }
 
-.section-heading {
-    margin-bottom: 1.8rem;
-}
-
-.section-heading h2 {
-    font-size: clamp(1.9rem, 3vw, 3.3rem);
-}
-
-.section-heading-center {
+.about-main-clean {
     max-width: 760px;
-    margin-inline: auto;
-    text-align: center;
 }
 
-.section-text {
-    max-width: 62ch;
-    margin: 1rem auto 0;
+.about-main-clean h2 {
+    margin: 0;
+    max-width: 10ch;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(1.8rem, 3vw, 3.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    color: var(--white);
 }
 
-.about-copy p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-
-.about-aside {
-    display: grid;
-    gap: 1rem;
-}
-
-.info-box,
-.value-card,
-.channel-card,
-.service-card,
-.form-card {
-    border-radius: var(--radius-lg);
-}
-
-.info-box {
-    background: rgba(255, 255, 255, 0.04);
+.about-copy-clean {
+    margin-top: 1.5rem;
+    max-width: 720px;
+    padding: 1.4rem 1.5rem;
+    border-radius: 24px;
+    background: rgba(10, 19, 34, 0.48);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 1.25rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
 }
 
-.info-box-outline {
-    background: transparent;
+.about-copy-clean p {
+    margin: 0 0 1rem;
+    color: #d7dfec;
+    font-size: 1.02rem;
 }
 
-.box-kicker {
-    color: var(--blue);
-    margin-bottom: 0.45rem;
+.about-copy-clean p:last-child {
+    margin-bottom: 0;
 }
 
-.info-box h3 {
+.about-side-clean {
+    display: grid;
+    gap: 1.1rem;
+}
+
+.about-card-clean {
+    padding: 1.45rem 1.5rem;
+    border-radius: 26px;
+    background: rgba(10, 19, 34, 0.52);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.about-card-clean h3 {
     margin: 0 0 0.7rem;
     font-family: "Manrope", sans-serif;
+    font-size: 1.9rem;
+    line-height: 1.1;
     color: var(--white);
-    line-height: 1.2;
 }
 
-.clean-list {
+.about-card-clean p {
     margin: 0;
-    padding-left: 1.1rem;
+    color: #c9d4e4;
 }
 
-.clean-list li {
-    margin-bottom: 0.45rem;
+.about-list-clean {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: #e4ebf6;
 }
+
+.about-list-clean li {
+    margin-bottom: 0.65rem;
+}
+
+.about-list-clean li:last-child {
+    margin-bottom: 0;
+}
+
+.about-card-tags {
+    padding-bottom: 1.3rem;
+}
+
+
 
 .services-grid {
     display: grid;
@@ -526,6 +674,7 @@ textarea {
     position: relative;
     overflow: hidden;
     padding: 1.5rem;
+    border-radius: var(--radius-lg);
     background:
         radial-gradient(circle at top right, rgba(118, 199, 255, 0.12), transparent 30%),
         linear-gradient(180deg, #0f1b2e 0%, #14233c 100%);
@@ -534,14 +683,28 @@ textarea {
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.service-card:hover,
-.value-card:hover,
-.channel-card:hover {
+.service-card:hover {
     transform: translateY(-6px);
+    border-color: rgba(111, 229, 154, 0.28);
 }
 
-.service-card:hover {
-    border-color: rgba(111, 229, 154, 0.28);
+.service-image {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    border-radius: 18px;
+    margin-bottom: 1rem;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
 }
 
 .service-tag {
@@ -549,11 +712,7 @@ textarea {
     margin-bottom: 0.8rem;
 }
 
-.service-card h3,
-.value-card h3,
-.channel-card h3,
-.form-head h3,
-.benefit-item h3 {
+.service-card h3 {
     margin: 0 0 0.7rem;
     font-family: "Manrope", sans-serif;
     color: var(--white);
@@ -565,12 +724,22 @@ textarea {
     color: var(--text);
 }
 
+.clean-list {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.clean-list li {
+    margin-bottom: 0.45rem;
+}
+
 .text-link {
     display: inline-block;
     margin-top: 0.4rem;
     font-weight: 700;
     color: var(--blue);
 }
+
 
 .value-grid {
     display: grid;
@@ -580,20 +749,30 @@ textarea {
 
 .value-card {
     padding: 1.35rem;
-    background: var(--white);
+    border-radius: var(--radius-lg);
+    background: #f9fcff;
     border: 1px solid var(--line-dark);
     box-shadow: 0 18px 32px rgba(14, 25, 40, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 36px rgba(14, 25, 40, 0.14);
+}
+
 .value-card h3 {
+    margin: 0 0 0.7rem;
+    font-family: "Manrope", sans-serif;
     color: var(--text-dark);
+    line-height: 1.15;
 }
 
 .value-card p {
     color: #5f6d82;
     margin: 0;
 }
+
 
 .event-section {
     position: relative;
@@ -604,6 +783,29 @@ textarea {
         linear-gradient(180deg, #08111f 0%, #0d1728 100%);
 }
 
+.event-section-enhanced {
+    position: relative;
+    overflow: hidden;
+}
+
+.event-section-enhanced::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 17, 31, 0.90) 0%,
+            rgba(8, 17, 31, 0.78) 38%,
+            rgba(8, 17, 31, 0.92) 100%
+        ),
+        url("imagenes/evento-energia.png");
+    background-size: cover;
+    background-position: center left;
+    opacity: 0.32;
+    z-index: 0;
+}
+
 .event-grid {
     display: grid;
     grid-template-columns: 0.95fr 1.05fr;
@@ -611,15 +813,31 @@ textarea {
     align-items: start;
 }
 
-.section-text-light {
-    color: var(--text);
-    margin-top: 1rem;
+.event-grid-better {
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.event-copy {
+    max-width: 700px;
+    padding-right: 1rem;
+}
+
+.event-copy h2 {
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(2.3rem, 4vw, 4.8rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    color: var(--white);
 }
 
 .event-benefits {
     display: grid;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 1.4rem;
 }
 
 .benefit-item {
@@ -647,7 +865,11 @@ textarea {
 }
 
 .benefit-item h3 {
+    margin: 0 0 0.35rem;
+    font-family: "Manrope", sans-serif;
     font-size: 1rem;
+    color: var(--white);
+    line-height: 1.15;
 }
 
 .benefit-item p {
@@ -656,6 +878,7 @@ textarea {
 }
 
 .form-card {
+    border-radius: var(--radius-lg);
     background: var(--white);
     padding: 1.1rem;
     border: 1px solid rgba(16, 29, 49, 0.1);
@@ -668,8 +891,11 @@ textarea {
 }
 
 .form-head h3 {
+    margin: 0 0 0.7rem;
+    font-family: "Manrope", sans-serif;
     color: var(--text-dark);
     font-size: 1.75rem;
+    line-height: 1.15;
 }
 
 .form-head p {
@@ -730,13 +956,6 @@ textarea {
     box-shadow: 0 0 0 4px rgba(118, 199, 255, 0.16);
 }
 
-.btn-submit {
-    width: 100%;
-    min-height: 56px;
-    margin-top: 0.25rem;
-    border: 0;
-    cursor: pointer;
-}
 
 .channels-grid {
     display: grid;
@@ -747,11 +966,17 @@ textarea {
 .channel-card {
     text-align: center;
     padding: 1.4rem 1rem;
+    border-radius: var(--radius-lg);
     background: var(--white);
     border: 1px solid rgba(16, 29, 49, 0.08);
     box-shadow: 0 18px 32px rgba(10, 20, 34, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     color: var(--text-dark);
+}
+
+.channel-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 36px rgba(10, 20, 34, 0.14);
 }
 
 .channel-icon {
@@ -768,7 +993,10 @@ textarea {
 }
 
 .channel-card h3 {
+    margin: 0 0 0.7rem;
+    font-family: "Manrope", sans-serif;
     color: var(--text-dark);
+    line-height: 1.15;
 }
 
 .channel-card p {
@@ -781,6 +1009,7 @@ textarea {
     color: #1c75c4;
     font-weight: 700;
 }
+
 
 .site-footer {
     padding: 2.2rem 0;
@@ -805,11 +1034,25 @@ textarea {
     margin: 0.3rem 0;
 }
 
+.hero-image-block,
+.about-image-block,
+.event-image-block {
+    display: none;
+}
+
 @media (max-width: 1100px) {
-    .hero-grid,
-    .about-grid,
-    .event-grid {
+    .hero-grid-better,
+    .about-layout-clean,
+    .event-grid-better {
         grid-template-columns: 1fr;
+    }
+
+    .hero-panel-compact {
+        max-width: 100%;
+    }
+
+    .about-main-clean h2 {
+        max-width: 100%;
     }
 
     .trust-band-grid,
@@ -819,10 +1062,6 @@ textarea {
 
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .about-grid {
-        gap: 1.2rem;
     }
 }
 
@@ -853,6 +1092,10 @@ textarea {
         border-left: 0;
         padding-left: 1rem;
     }
+
+    .event-copy {
+        padding-right: 0;
+    }
 }
 
 @media (max-width: 640px) {
@@ -862,6 +1105,16 @@ textarea {
 
     .hero {
         padding-top: 3.8rem;
+    }
+
+    .hero-has-photo {
+        min-height: auto;
+    }
+
+    .hero-has-photo::after,
+    .about-section-clean::before,
+    .event-section-enhanced::before {
+        background-position: center center;
     }
 
     .hero-actions,
@@ -886,5 +1139,18 @@ textarea {
 
     .container {
         width: min(100% - 1.2rem, var(--max-width));
+    }
+
+    .about-main-clean h2 {
+        font-size: clamp(2.3rem, 10vw, 4rem);
+    }
+
+    .about-copy-clean,
+    .about-card-clean {
+        padding: 1.15rem;
+    }
+
+    .service-image {
+        height: 200px;
     }
 }
